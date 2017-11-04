@@ -14,7 +14,8 @@ module.exports = {
       });
     }, // a function which produces all the messages
     post: function (body, cb) {
-      var sql = `INSERT INTO messages (username, text, roomname) VALUES ("${body.username}", "${body.message}", "${body.roomname}")`;
+      console.log(body);
+      var sql = `INSERT INTO messages (username, text, roomname) VALUES ("${body.username}", "${body.text}", "${body.roomname}")`;
       db.query(sql, function(err, result) {
         if (err) {
           console.error('query failure', err);

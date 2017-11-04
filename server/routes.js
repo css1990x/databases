@@ -10,6 +10,18 @@ router.get('/users', controller.users.get);
 
 router.post('/users', controller.users.post);
 
+var defaultCorsHeaders = {
+  'access-control-allow-origin': '*',
+  'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'access-control-allow-headers': 'content-type, accept',
+  'access-control-max-age': 10 // Seconds.
+};
+
+router.options('/messages', function(req, res) {
+  console.log('received options');
+  res.status(200).set(defaultCorsHeaders).send();
+});
+
 
 module.exports = router;
 
