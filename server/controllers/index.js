@@ -3,7 +3,7 @@ var models = require('../models');
 module.exports = {
   messages: {
     get: function (req, res) {
-      models.messages.get(function(messages) {
+      models.messages.get(req.query, function(messages) {
         res.send(messages);
       });
     }, // a function which handles a get request for all messages

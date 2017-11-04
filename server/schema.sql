@@ -8,7 +8,7 @@ CREATE TABLE messages (
   username VARCHAR(40) NOT NULL,
   text VARCHAR(100) NOT NULL,
   roomname VARCHAR(40) NOT NULL,
-  createdAt Date,
+  createdAt DATETIME,
   PRIMARY KEY ( objectId )
 );
 
