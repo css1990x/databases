@@ -4,6 +4,12 @@ USE chat;
 
 CREATE TABLE messages (
   /* Describe your table here.*/
+  id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(40) NOT NULL,
+  text VARCHAR(100) NOT NULL,
+  roomname VARCHAR(40) NOT NULL,
+  createdAt Date,
+  PRIMARY KEY ( id )
 );
 
 /* Create other tables and define schemas for them here! */
